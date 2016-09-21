@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-  compile 'io.michaelrocks:optional:1.0.0'
+  compile 'io.michaelrocks:optional:1.0.1'
 }
 ```
 
