@@ -29,6 +29,7 @@ class OptionalTest : StringSpec() {
 
     "isSome for Optional.None should return false" {
       none().isSome shouldBe false
+      noneOfType<Unit>().isSome shouldBe false
     }
 
     "isNone for Optional.Some should return false" {
@@ -37,6 +38,7 @@ class OptionalTest : StringSpec() {
 
     "isNone for Optional.None should return true" {
       none().isNone shouldBe true
+      noneOfType<Unit>().isNone shouldBe true
     }
 
     "some() should be equal to Optional.Some()" {
@@ -45,6 +47,10 @@ class OptionalTest : StringSpec() {
 
     "none() should be equal to Optional.None" {
       none() should be theSameInstanceAs Optional.None
+    }
+
+    "noneOfType() should be equal to Optional.None" {
+      noneOfType<Unit>() should be theSameInstanceAs Optional.None
     }
 
     "get() for Optional.Some should return its value" {
