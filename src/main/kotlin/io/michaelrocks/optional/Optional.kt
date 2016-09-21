@@ -70,6 +70,11 @@ fun none(): Optional<Nothing> {
   return Optional.None
 }
 
+/** An [Optional] of type [T] without a value. */
+fun <T : Any> noneOfType(): Optional<T> {
+  return Optional.None
+}
+
 /**
  * @return A contained value.
  * @throws [NoSuchElementException] if the [Optional] contains no value.
